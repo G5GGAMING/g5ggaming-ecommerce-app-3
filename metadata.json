@@ -1,0 +1,6 @@
+{
+  "name": "E-Commerce App",
+  "description": "A comprehensive e-commerce application built with Flutter, featuring integrated Firebase authentication, real-time products sync, and cart management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

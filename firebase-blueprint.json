@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "A product available in the store",
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "title": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "image": { "type": "string" }
+      },
+      "required": ["id", "title", "price", "category", "image"]
+    },
+    "Favorite": {
+      "title": "Favorite",
+      "description": "A user's favorite product ID",
+      "type": "object",
+      "properties": {
+        "productId": { "type": "integer" }
+      },
+      "required": ["productId"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Collection of all products"
+    },
+    "/users/{userId}/favorites/{favoriteId}": {
+      "schema": "Favorite",
+      "description": "User specific favorites"
+    }
+  }
+}
